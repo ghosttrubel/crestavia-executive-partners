@@ -1,9 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { features } from "./content";
 import { Icon } from "./icons";
 import { Reveal } from "./reveal";
-import { StoryPlay } from "./preview-interactions";
+import { StoryVideo } from "./story-video";
 import styles from "./homepage.module.css";
 
 export function AboutPreview() {
@@ -18,8 +17,7 @@ export function AboutPreview() {
             <Link className={styles.redButton} href="/about" prefetch={false}>Our Story <Icon name="arrow" /></Link>
           </div>
           <div className={styles.storyImage}>
-            <Image src="/images/hero/hero-board-advisory.png" alt="Executives in a boardroom overlooking a city skyline" fill sizes="(max-width: 700px) 90vw, (max-width: 1000px) 45vw, 30vw" />
-            <StoryPlay />
+            <StoryVideo />
           </div>
           <ul className={styles.features}>
             {features.map((feature) => (

@@ -33,6 +33,8 @@
 .aboutCopy .bodyCopy { max-width: 490px; }
 .storyImage { position: relative; min-height: clamp(235px, 19.8vw, 317px); overflow: hidden; border-radius: 2px; background: #031b2a; }
 .storyImage > img { object-fit: cover; object-position: 58% center; transition: transform 600ms ease; }
+.storyVideo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.storyVideo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .storyImage::after { content: ""; position: absolute; inset: 30% 0 0; background: linear-gradient(transparent, #031b2ac9); pointer-events: none; }
 .storyImage:hover > img { transform: scale(1.035); }
 .storyCaption { position: absolute; z-index: 1; left: 7%; right: 7%; bottom: 7%; display: flex; flex-direction: column; align-items: flex-start; color: white; }
@@ -281,8 +283,12 @@
   .footerContact, .stayConnected { grid-column: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .storyVideo { display: none; }
+  .storyImage { background: #031b2a url("/images/hero/hero-board-advisory.png") center / cover no-repeat; }
   .redButton, .redButton svg, .textLink svg, .storyImage > img, .storyPlay, .serviceCard, .outlineArrow svg, .sectorCard, .sectorImage img, .yellowArrow svg, .emailField button svg { transition: none; }
   .serviceCard:hover, .storyImage:hover > img, .storyPlay:hover, .sectorCard:hover img, .redButton:hover svg, .textLink:hover svg, .serviceCard:hover .outlineArrow svg, .sectorCard:hover .yellowArrow svg, .emailField button:hover svg { transform: none; }
+  .storyVideo { display: none; }
+  .storyImage { background: #031b2a url("/images/hero/hero-board-advisory.png") center / cover no-repeat; }
 }
 /* Premium homepage refinement */
 .statsInner{min-height:clamp(150px,12vw,194px)}.stat{gap:clamp(12px,1vw,18px);padding-inline:clamp(16px,2vw,34px)}.stat>svg{width:clamp(32px,2.8vw,46px);height:clamp(32px,2.8vw,46px)}.stat dd{font-size:clamp(28px,2.5vw,40px)}.trust{padding-left:clamp(26px,2.7vw,44px)}.trust>p{margin-bottom:22px}.trustMarks span{font-size:clamp(12px,1.08vw,17px)}

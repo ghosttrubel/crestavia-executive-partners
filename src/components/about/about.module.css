@@ -1,0 +1,86 @@
+.container { width: min(90%, 1440px); margin-inline: auto; }
+.hero, .whoWeAre, .values, .expertise, .sectors { padding-block: clamp(72px, 8vw, 132px); }
+.eyebrow { margin: 0 0 14px; color: var(--brand-red); font-size: 12px; font-weight: 700; letter-spacing: .2em; line-height: 1.3; }
+.hero { overflow: hidden; padding-top: clamp(52px, 7vw, 112px); background: #f7f8fa; }
+.heroGrid, .whoGrid, .globalGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .95fr); gap: clamp(42px, 7vw, 128px); align-items: center; }
+.heroCopy { max-width: 680px; }
+.hero h1, .whoCopy h2, .purpose h2, .sectionIntro h2, .approachIntro h2, .global h2, .sectionTop h2, .closing h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -.045em; line-height: 1.03; }
+.hero h1 { font-size: clamp(44px, 5.4vw, 84px); }
+.heroCopy > p:not(.eyebrow), .whoCopy > p:not(.eyebrow), .purposeInner > div p, .globalGrid > div > p:not(.eyebrow), .closingContent > p:not(.eyebrow) { font-size: clamp(16px, 1.25vw, 20px); line-height: 1.65; color: #33445a; }
+.heroCopy > p:not(.eyebrow):first-of-type { margin: 30px 0 12px; font-size: clamp(18px, 1.5vw, 24px); line-height: 1.5; color: #152943; }
+.heroCopy > p:last-child { margin: 0; }
+.heroImage, .whoImage { position: relative; min-height: clamp(390px, 42vw, 650px); overflow: hidden; background: #0b2638; }
+.heroImage img, .whoImage img, .sectorCard img, .closing > img { object-fit: cover; }
+.heroImage::after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, #031b2ac7); }
+.imageCaption { position: absolute; z-index: 1; right: 28px; bottom: 26px; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.whoWeAre { background: #fff; }
+.whoGrid { grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); }
+.whoImage { min-height: clamp(390px, 37vw, 580px); }
+.whoCopy { max-width: 700px; }
+.whoCopy h2, .sectionIntro h2, .approachIntro h2, .global h2, .sectionTop h2 { font-size: clamp(36px, 4vw, 64px); }
+.whoCopy > p:not(.eyebrow) { margin: 22px 0 0; }
+.purpose { padding-block: clamp(76px, 10vw, 160px); background: #031b2a; color: #fff; }
+.purpose .eyebrow { color: var(--brand-yellow); }
+.purposeInner { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr); gap: clamp(40px, 10vw, 160px); align-items: end; }
+.purpose h2 { max-width: 800px; font-size: clamp(42px, 5.4vw, 84px); }
+.purposeInner > div { padding-bottom: 4px; }
+.purposeInner > div p { margin: 0 0 18px; color: #d9e3ea; }
+.purposeInner > div p:last-child { margin-bottom: 0; }
+.values { background: #f6f8fa; }
+.sectionIntro { max-width: 720px; margin-bottom: clamp(36px, 5vw, 72px); }
+.valueGrid, .expertiseGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 2vw, 30px); }
+.valueCard { min-height: 250px; padding: clamp(24px, 2.3vw, 38px); border-top: 3px solid var(--brand-yellow); background: #fff; box-shadow: 0 10px 30px #06172e0a; }
+.valueCard svg { --icon-fill: var(--brand-red); width: 42px; height: 42px; color: var(--brand-red); }
+.valueCard h3, .expertiseCard h3, .approachList h3, .sectorCard h3 { margin: 28px 0 10px; font-size: clamp(18px, 1.45vw, 23px); line-height: 1.2; }
+.valueCard p, .expertiseCard p, .approachList p { margin: 0; color: #42536a; font-size: 15px; line-height: 1.6; }
+.approach { padding-block: clamp(76px, 9vw, 144px); background: #fff; }
+.approachIntro { margin-bottom: clamp(38px, 5vw, 76px); }
+.approachList { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(22px, 4vw, 64px); margin: 0; padding: 0; list-style: none; counter-reset: approach; }
+.approachList li { position: relative; padding-top: 27px; border-top: 1px solid #cbd5df; }
+.approachList li::after { content: ""; position: absolute; top: -2px; left: 0; width: 68px; height: 3px; background: var(--brand-red); }
+.approachList span { color: var(--brand-red); font-size: 14px; font-weight: 700; letter-spacing: .13em; }
+.approachList h3 { margin-top: 19px; }
+.global { overflow: hidden; padding-block: clamp(76px, 9vw, 144px); background: #eaf0f4; }
+.globalGrid { grid-template-columns: minmax(0, 1fr) minmax(330px, .8fr); }
+.globalGrid > div:first-child { max-width: 720px; }
+.globalGrid > div > p:not(.eyebrow) { margin: 22px 0 0; }
+.globeArt { position: relative; display: grid; place-items: center; min-height: 410px; overflow: hidden; border-radius: 50%; background: #08243a; color: var(--brand-yellow); }
+.globeArt > svg { width: 54%; height: 54%; opacity: .92; }
+.globeArt i { position: absolute; border: 1px solid #ffe50066; border-radius: 50%; }
+.globeArt i:nth-of-type(1) { width: 84%; height: 30%; }
+.globeArt i:nth-of-type(2) { width: 30%; height: 84%; }
+.globeArt i:nth-of-type(3) { inset: 13%; }
+.globeArt span { position: absolute; bottom: 47px; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .13em; line-height: 1.5; text-align: center; text-transform: uppercase; }
+.expertise { background: #031b2a; color: #fff; }
+.expertise .eyebrow { color: var(--brand-yellow); }
+.expertiseCard { display: flex; min-height: 275px; flex-direction: column; padding: clamp(24px, 2.3vw, 38px); border: 1px solid #456071; color: inherit; text-decoration: none; transition: background .2s ease, border-color .2s ease, transform .2s ease; }
+.expertiseCard:hover { border-color: var(--brand-yellow); background: #092d42; transform: translateY(-4px); }
+.expertiseCard h3 { margin: 0 0 15px; }
+.expertiseCard p { color: #d5e0e7; }
+.expertiseCard span, .sectionTop > a { display: inline-flex; align-items: center; gap: 14px; margin-top: auto; color: var(--brand-yellow); font-size: 14px; font-weight: 700; text-decoration: none; }
+.expertiseCard svg, .sectionTop svg, .redButton svg, .outlineButton svg { width: 19px; height: 19px; }
+.sectors { background: #fff; }
+.sectionTop { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: clamp(36px, 5vw, 70px); }
+.sectionTop > a { margin: 0; color: var(--brand-red); white-space: nowrap; }
+.sectorGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 30px); }
+.sectorCard { display: block; color: inherit; text-decoration: none; }
+.sectorCard > div { position: relative; aspect-ratio: 1.43; overflow: hidden; background: #d6e0e8; }
+.sectorCard img { transition: transform .4s ease; }
+.sectorCard:hover img { transform: scale(1.05); }
+.sectorCard h3 { margin: 14px 0 0; }
+.closing { position: relative; isolation: isolate; overflow: hidden; min-height: 525px; padding-block: clamp(80px, 9vw, 145px); color: #fff; background: #06172e; }
+.closing > img { z-index: -2; object-position: center; opacity: .42; }
+.closing::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, #031b2af2 0%, #031b2ad5 52%, #031b2a66); }
+.closingContent { max-width: 790px; }
+.closing .eyebrow { color: var(--brand-yellow); }
+.closing h2 { font-size: clamp(42px, 5.2vw, 80px); }
+.closingContent > p:not(.eyebrow) { max-width: 660px; margin: 27px 0 34px; color: #e2ebf0; }
+.closingContent > div { display: flex; flex-wrap: wrap; gap: 14px; }
+.redButton, .outlineButton { display: inline-flex; min-height: 52px; align-items: center; justify-content: center; gap: 18px; padding: 0 24px; border: 1px solid var(--brand-red); background: var(--brand-red); color: #fff; font-size: 15px; font-weight: 700; text-decoration: none; }
+.outlineButton { border-color: #fff; background: transparent; }
+.redButton:hover { background: #ba0010; }
+.outlineButton:hover { border-color: var(--brand-yellow); color: var(--brand-yellow); }
+@media (max-width: 1000px) { .heroGrid, .whoGrid, .globalGrid { gap: 48px; } .valueGrid, .expertiseGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .approachList { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 48px; } .heroImage { min-height: 490px; } .globeArt { min-height: 350px; } }
+@media (max-width: 700px) { .container { width: min(calc(100% - 40px), 620px); } .hero, .whoWeAre, .values, .expertise, .sectors, .approach, .global { padding-block: 62px; } .hero { padding-top: 50px; } .heroGrid, .whoGrid, .globalGrid, .purposeInner { grid-template-columns: minmax(0, 1fr); gap: 34px; } .hero h1 { font-size: clamp(39px, 11.3vw, 58px); } .hero h1 br { display: none; } .heroCopy > p:not(.eyebrow):first-of-type { margin-top: 24px; } .heroImage, .whoImage { min-height: 0; aspect-ratio: 1.17; } .whoImage { order: 2; } .whoCopy { order: 1; } .purpose { padding-block: 72px; } .purpose h2 { font-size: clamp(38px, 10.4vw, 56px); } .purpose h2 br { display: none; } .purposeInner { gap: 30px; } .sectionIntro, .approachIntro { margin-bottom: 34px; } .whoCopy h2, .sectionIntro h2, .approachIntro h2, .global h2, .sectionTop h2 { font-size: clamp(34px, 9.6vw, 51px); } .valueGrid, .expertiseGrid, .approachList, .sectorGrid { grid-template-columns: minmax(0, 1fr); } .valueCard, .expertiseCard { min-height: 0; } .valueCard h3 { margin-top: 20px; } .approachList { gap: 30px; } .approachList h3 { margin: 13px 0 8px; } .globeArt { min-height: 320px; width: min(100%, 390px); margin-inline: auto; } .sectionTop { display: block; margin-bottom: 35px; } .sectionTop > a { margin-top: 22px; } .sectorCard > div { aspect-ratio: 1.6; } .closing { min-height: 0; padding-block: 72px; } .closing h2 { font-size: clamp(39px, 10.4vw, 56px); } }
+@media (max-width: 420px) { .container { width: calc(100% - 32px); } .hero, .whoWeAre, .values, .expertise, .sectors, .approach, .global { padding-block: 52px; } .hero h1 { font-size: clamp(37px, 11vw, 46px); } .heroImage, .whoImage { aspect-ratio: 1.05; } .imageCaption { right: 18px; bottom: 18px; font-size: 9px; } .closingContent > div { display: grid; grid-template-columns: 1fr; } .redButton, .outlineButton { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .expertiseCard, .sectorCard img { transition: none; } .expertiseCard:hover, .sectorCard:hover img { transform: none; } }
