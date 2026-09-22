@@ -344,3 +344,14 @@
   .storyTitle { font-size: 14px; }
   .ctaStatement { right: 20px; }
 }
+
+/* Interactive testimonial controls */
+.testimonial .quotePanel { width: 100%; }
+.testimonialControls { position: absolute; right: clamp(24px, 4vw, 64px); bottom: 18px; display: flex; align-items: center; gap: 12px; }
+.testimonialControls > button, .quoteDots button { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #7b8d9c; border-radius: 50%; background: transparent; color: #fff; cursor: pointer; }
+.quoteDots { position: static; display: flex; gap: 8px; }
+.quoteDots button { width: 10px; height: 10px; padding: 0; border: 0; background: #65788c; }
+.quoteDots button[aria-current="true"] { background: var(--brand-yellow); }
+.testimonialControls > button:hover { border-color: var(--brand-yellow); color: var(--brand-yellow); }
+@media (max-width: 700px) { .testimonialControls { right: 24px; bottom: 12px; } .quotePanel blockquote { padding-bottom: 38px; } }
+@media (prefers-reduced-motion: reduce) { .testimonialControls > button, .quoteDots button { transition: none; } }

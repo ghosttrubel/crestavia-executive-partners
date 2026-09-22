@@ -1,0 +1,2 @@
+import type { Metadata } from "next"; import { PublicPage } from "@/components/public-page";
+export const metadata: Metadata={title:"Careers | Crestavia Executive Partners",description:"Explore executive and board opportunities with Crestavia Executive Partners.",alternates:{canonical:"https://crestaviaexecutivepartners.org/careers"}}; export default function Page(){return <PublicPage type="careers"/>}

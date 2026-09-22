@@ -1,0 +1,21 @@
+import Image from "next/image";
+import Link from "next/link";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/homepage/site-footer";
+import { sectors, services } from "./market-pages";
+import styles from "./landing-pages.module.css";
+
+export function ServicesLandingPage() { return <div id="top"><SiteHeader /><main>
+  <section className={styles.hero}><div className={styles.container}><p className={styles.eyebrow}>OUR SERVICES</p><h1>Leadership Solutions Built Around What Comes Next.</h1><p>Every leadership challenge is different. Crestavia Executive Partners combines executive search, board advisory, leadership advisory and talent intelligence to help organisations make informed leadership decisions at critical moments of growth, change and succession.</p><Link className={styles.redButton} href="/contact?enquiry=leadership" prefetch={false}>Start a Conversation <span>→</span></Link></div></section>
+  <section className={styles.intro}><div className={styles.container}><p className={styles.eyebrow}>HOW WE HELP</p><h2>Expertise Across the Leadership Lifecycle.</h2><p>Crestavia supports organisations from identifying critical executive talent through board composition, leadership development, succession and market intelligence. Our work is shaped around the decision, context and leadership outcome that matters most.</p></div></section>
+  <section className={styles.cards}><div className={styles.container}>{services.map((service, index) => <article key={service.slug}><span>{String(index + 1).padStart(2, "0")}</span><h2>{service.eyebrow.split(" ").map((word) => word[0] + word.slice(1).toLowerCase()).join(" ")}</h2><p>{service.description}</p><ul>{service.areas.slice(0, 5).map((area) => <li key={area}>{area}</li>)}</ul><Link href={`/services/${service.slug}`} prefetch={false}>Explore {service.eyebrow.split(" ").map((word) => word[0] + word.slice(1).toLowerCase()).join(" ")} <b>→</b></Link></article>)}</div></section>
+  <section className={styles.partner}><div className={styles.container}><p className={styles.eyebrow}>HOW WE PARTNER</p><h2>Clear thinking from the first conversation to the final decision.</h2><ol>{["Understand", "Define", "Search / Analyse", "Engage", "Deliver"].map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</li>)}</ol></div></section>
+  <Closing /></main><SiteFooter /></div>; }
+
+export function SectorsLandingPage() { return <div id="top"><SiteHeader /><main>
+  <section className={styles.hero}><div className={styles.container}><p className={styles.eyebrow}>SECTORS</p><h1>Specialist Expertise. Global Perspective.</h1><p>Leadership requirements are shaped by industry context. Crestavia combines executive search expertise with an understanding of the markets, technologies and organisational challenges influencing leadership across complex sectors.</p></div></section>
+  <section className={styles.sectorIntro}><div className={styles.container}><p className={styles.eyebrow}>OUR SECTORS</p><h2>Context matters when leadership decisions are made.</h2><p>We consider the forces shaping each environment, from technical change and regulation to operational complexity and evolving talent markets. The focus is always the leadership need in front of the organisation.</p></div></section>
+  <section className={styles.sectors}><div className={styles.container + " " + styles.sectorGrid}>{sectors.map((sector) => <Link key={sector.slug} href={`/sectors/${sector.slug}`} prefetch={false} className={styles.sectorCard}><div><Image src={sector.image} alt="" fill sizes="(max-width: 700px) 100vw, 50vw" /></div><p>{sector.eyebrow}</p><h2>{sector.title}</h2><ul>{sector.areas.map((area) => <li key={area}>{area}</li>)}</ul><span>Explore sector <b>→</b></span></Link>)}</div></section>
+  <Closing /></main><SiteFooter /></div>; }
+
+function Closing() { return <section className={styles.closing}><div className={styles.container}><p className={styles.eyebrow}>START A CONVERSATION</p><h2>The right leadership decision can shape what comes next.</h2><div><Link className={styles.redButton} href="/contact?enquiry=executive-search" prefetch={false}>Find Executive Talent <span>→</span></Link><Link className={styles.outlineButton} href="/contact" prefetch={false}>Contact Us <span>→</span></Link></div></div></section>; }

@@ -22,7 +22,7 @@ export function HomepageHero() {
           We connect organisations with outstanding executive and board talent to drive sustainable growth, innovation and lasting impact.
         </p>
         <div className={styles.ctas}>
-          <Link className={styles.primaryCta} href="/contact" prefetch={false}>
+          <Link className={styles.primaryCta} href="/contact?enquiry=executive-search" prefetch={false}>
             Find Executive Talent
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" /></svg>
           </Link>

@@ -10,7 +10,7 @@ export function ProcessSection() {
       <section id="process" className={styles.process} aria-labelledby="process-title">
         <div className={styles.container + " " + styles.processGrid}>
           <div><p className={styles.eyebrow}>OUR PROCESS</p><h2 id="process-title" className={styles.heading}>A Structured Approach<br />for Better Outcomes.</h2></div>
-          <Link className={styles.textLink + " " + styles.processLink} href="/about#our-process" prefetch={false}>Learn More <Icon name="arrow" /></Link>
+          <Link className={styles.textLink + " " + styles.processLink} href="/about#approach" prefetch={false}>Learn More <Icon name="arrow" /></Link>
           <ol className={styles.steps}>
             {processSteps.map((step, index) => (
               <li key={step.title}>

@@ -90,7 +90,7 @@ function PurposeAndValues() {
 }
 
 function Approach() {
-  return <section className={styles.approach} aria-labelledby="approach-title">
+  return <section id="approach" className={styles.approach} aria-labelledby="approach-title">
     <div className={styles.container}>
       <div className={styles.approachIntro}><p className={styles.eyebrow}>OUR APPROACH</p><h2 id="approach-title">Rigorous Search. Human Judgement.</h2></div>
       <ol className={styles.approachList}>{approach.map((step) => <li key={step.number}><span>{step.number}</span><div><h3>{step.title}</h3><p>{step.copy}</p></div></li>)}</ol>

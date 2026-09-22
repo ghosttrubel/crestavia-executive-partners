@@ -33,7 +33,7 @@ export function SiteFooter() {
       <div className={styles.footerBottom}>
         <div className={styles.container}>
           <p>© 2026 Crestavia Executive Partners. All rights reserved.</p>
-          <nav aria-label="Legal"><Link href="/privacy-policy" prefetch={false}>Privacy Policy</Link><Link href="/terms-of-use" prefetch={false}>Terms of Use</Link><Link href="/cookie-policy" prefetch={false}>Cookie Policy</Link></nav>
+          <nav aria-label="Legal"><Link href="/privacy" prefetch={false}>Privacy Policy</Link><Link href="/terms" prefetch={false}>Terms of Use</Link><Link href="/cookies" prefetch={false}>Cookie Policy</Link></nav>
           <a className={styles.backToTop} href="#top" aria-label="Back to top"><Icon name="arrow" /></a>
         </div>
       </div>
