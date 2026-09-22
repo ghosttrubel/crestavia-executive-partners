@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // The local preview accesses the dev server through this host.
+  allowedDevOrigins: ["192.168.56.1"],
 };
 
 export default nextConfig;
