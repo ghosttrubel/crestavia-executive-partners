@@ -14,7 +14,7 @@ export function AboutPreview() {
             <p className={styles.eyebrow}>ABOUT CRESTAVIA</p>
             <h2 id="about-title" className={styles.heading}>A Global Partner<br />in Executive Talent.</h2>
             <p className={styles.bodyCopy}>Crestavia Executive Partners is an independent executive search and advisory firm, working with organisations across global markets to identify, attract and support exceptional leadership talent.</p>
-            <Link className={styles.redButton} href="/about" prefetch={false}>Our Story <Icon name="arrow" /></Link>
+            <Link className={styles.redButton} href="/about#our-story" prefetch={false}>Our Story <Icon name="arrow" /></Link>
           </div>
           <div className={styles.storyImage}>
             <StoryVideo />

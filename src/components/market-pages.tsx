@@ -24,7 +24,19 @@ export const sectors: Detail[] = [
 
 export function DetailPage({ detail, kind }: { detail: Detail; kind: "service" | "sector" }) {
   const relatedHref = kind === "service" ? "/sectors" : "/services";
+  const sectionName = kind === "service" ? "Services" : "Sectors";
+  const sectionPath = kind === "service" ? "services" : "sectors";
+  const breadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://crestaviaexecutivepartners.org/" },
+      { "@type": "ListItem", position: 2, name: sectionName, item: `https://crestaviaexecutivepartners.org/${sectionPath}` },
+      { "@type": "ListItem", position: 3, name: detail.eyebrow, item: `https://crestaviaexecutivepartners.org/${sectionPath}/${detail.slug}` },
+    ],
+  };
   return <div id="top"><SiteHeader /><main>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
     <section className={styles.hero}><div className={styles.container + " " + styles.heroGrid}><div><p className={styles.eyebrow}>{detail.eyebrow}</p><h1>{detail.title}</h1><p>{detail.description}</p><Link className={styles.redButton} href={`/contact?enquiry=${detail.enquiry}`} prefetch={false}>{detail.cta} <span>→</span></Link></div><div className={styles.heroImage}><Image src={detail.image} alt="" fill priority sizes="(max-width: 700px) 100vw, 48vw" /></div></div></section>
     <section className={styles.intro}><div className={styles.narrow}><p className={styles.eyebrow}>THE CONTEXT</p><h2>Perspective for consequential leadership decisions.</h2><p>{detail.intro}</p></div></section>
     <section className={styles.split}><div className={styles.container + " " + styles.splitGrid}><article><p className={styles.eyebrow}>WHEN IT MATTERS</p><h2>Situations where focused support can help.</h2><List items={detail.challenges} /></article><article><p className={styles.eyebrow}>HOW WE SUPPORT</p><h2>Practical perspective, tailored to the requirement.</h2><List items={detail.support} /></article></div></section>

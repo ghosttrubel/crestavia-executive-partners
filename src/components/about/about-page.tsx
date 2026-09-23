@@ -71,6 +71,27 @@ function WhoWeAre() {
   </section>;
 }
 
+function OurStory() {
+  return <section id="our-story" className={styles.ourStory} aria-labelledby="our-story-title">
+    <div className={styles.container + " " + styles.storyGrid}>
+      <div>
+        <p className={styles.eyebrow}>OUR STORY</p>
+        <h2 id="our-story-title">More Than Two Decades of Leadership Partnership.</h2>
+      </div>
+      <div className={styles.storyCopy}>
+        <p>For more than two decades, Crestavia has worked in partnership with organisations and executives navigating consequential leadership decisions. Across changing markets, organisational priorities and leadership expectations, our work has evolved while remaining grounded in discretion, judgement and enduring relationships.</p>
+        <p>Crestavia continues to operate internationally across Executive Search, Board Advisory, Leadership Advisory and Talent Intelligence. Over that time, we have helped many organisations and executives achieve important leadership outcomes with a focus on long-term impact.</p>
+        <div className={styles.founderBlock}>
+          <p className={styles.eyebrow}>FOUNDER</p>
+          <h3>Founded on Relationships That Last.</h3>
+          <p><strong>Paul Murphy</strong><span>Founder, Crestavia Executive Partners</span></p>
+          <a href="https://www.linkedin.com/in/paulmurphy72" target="_blank" rel="noopener noreferrer">View LinkedIn Profile <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>;
+}
+
 function PurposeAndValues() {
   return <>
     <section className={styles.purpose} aria-labelledby="purpose-title">
@@ -119,5 +140,5 @@ function ClosingCta() {
 }
 
 export function AboutPage() {
-  return <div id="top"><SiteHeader /><main><AboutHero /><WhoWeAre /><PurposeAndValues /><Approach /><GlobalPerspective /><ExpertiseAndSectors /><ClosingCta /></main><SiteFooter /></div>;
+  return <div id="top"><SiteHeader /><main><AboutHero /><WhoWeAre /><OurStory /><PurposeAndValues /><Approach /><GlobalPerspective /><ExpertiseAndSectors /><ClosingCta /></main><SiteFooter /></div>;
 }

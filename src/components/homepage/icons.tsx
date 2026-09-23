@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export type IconName = "people" | "building" | "globe" | "star" | "target" | "growth" | "document" | "arrow" | "pin" | "phone" | "link" | "linkedin";
+export type IconName = "people" | "building" | "globe" | "star" | "target" | "growth" | "document" | "arrow" | "pin" | "phone" | "email" | "link" | "linkedin";
 
 export function Icon({ name, ...props }: SVGProps<SVGSVGElement> & { name: IconName }) {
   const paths = {
@@ -14,6 +14,7 @@ export function Icon({ name, ...props }: SVGProps<SVGSVGElement> & { name: IconN
     arrow: <path d="M5 16h22m-8-8 8 8-8 8" />,
     pin: <><path d="M25 12c0 7-9 17-9 17S7 19 7 12a9 9 0 0 1 18 0Z" /><circle cx="16" cy="12" r="3" /></>,
     phone: <path d="M8 4h5l2 7-3 2c1.7 3.4 3.6 5.3 7 7l2-3 7 2v5c0 2-1.7 3.5-3.7 3.2C12.8 26.1 5.9 19.2 4.8 7.7 4.5 5.7 6 4 8 4Z" />,
+    email: <><rect x="3" y="6" width="26" height="20" rx="2" /><path d="m5 9 11 8 11-8" /></>,
     link: <><path d="m13 19 6-6m-8 1-4 4a5 5 0 0 0 7 7l4-4m-4-10 4-4a5 5 0 0 1 7 7l-4 4" /></>,
     linkedin: <><rect x="2" y="2" width="28" height="28" rx="2" fill="currentColor" stroke="none" /><path d="M9 14v10m0-16v1m7 15V14m0 5c0-7 8-7 8-1v6" stroke="white" strokeWidth="3" /></>,
   };

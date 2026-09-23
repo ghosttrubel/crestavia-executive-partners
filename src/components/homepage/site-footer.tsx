@@ -20,7 +20,8 @@ export function SiteFooter() {
         <div className={styles.footerContact}>
           <h2>Contact</h2>
           <a className={styles.contactLine} href="https://crestaviaexecutivepartners.org"><Icon name="globe" /><span>crestaviaexecutivepartners.org</span></a>
-          <a className={styles.contactLine} href="tel:+16722267432"><Icon name="phone" /><span>+1 (672) 226-7432</span></a>
+          <a className={styles.contactLine} href="tel:+18259499650"><Icon name="phone" /><span>+1 (825) 949-9650</span></a>
+          <a className={styles.contactLine} href="mailto:info@crestaviaexecutivepartners.org"><Icon name="email" /><span>info@crestaviaexecutivepartners.org</span></a>
           <p className={styles.contactLine}><Icon name="pin" /><span>Global Reach<br />Local Insight</span></p>
           <span className={styles.linkedinPlaceholder} aria-label="LinkedIn — official company profile coming soon" title="Official LinkedIn profile coming soon"><Icon name="linkedin" /><span>LinkedIn · Coming soon</span></span>
         </div>
